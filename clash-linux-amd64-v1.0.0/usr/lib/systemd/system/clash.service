@@ -1,0 +1,15 @@
+[Unit]
+Description=Clash Premium, changing node: https://clash.razord.top/
+After=network.target NetworkManager.service systemd-networkd.service iwd.service
+
+[Service]
+Type=simple
+ExecStart=/bin/clash -d /etc/clash
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+StandardOutput=file:/var/log/clash/stdout.log
+StandardError=file:/var/log/clash/stderr.log
+
+[Install]
+WantedBy=multi-user.target

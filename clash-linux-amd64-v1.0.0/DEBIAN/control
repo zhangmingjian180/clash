@@ -1,0 +1,9 @@
+Package: clash
+Version: 1.0.0
+License: GPL-3.0
+Architecture: amd64
+Maintainer: Jian Zhang <zhangmingjian180@qq.com>
+Section: net
+Priority: optional
+Homepage: https://github.com/zhangmingjian180/clash
+Description: The universal proxy platform.
